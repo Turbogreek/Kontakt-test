@@ -1,68 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Oliver Trakossas</title>
 <style>
-.center {
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1vh;
-    text-align: center;
-}
-.split-container {
-  display: grid;
- width: 80%;
- height: 400px;
- box-shadow: 0 4px 10px 
-}
-.left, .right {
-  padding: 20px;
-}
-.static {
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 1vh;
-}
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: rgb(240, 240, 240);
-}
-
-h1 {
-  color: rgb(5, 0, 0);
-  text-align: center;
-}
-
-p {
-  font-family: Open Sans, sans-serif;
-  font-size: 20px;
-}
-</style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin: 8px 0 0;
+      color: #666;
+    }
+    section {
+      margin-bottom: 24px;
+    }
+    section h2 {
+      margin-bottom: 12px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 6px;
+      font-size: 1.4rem;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .two-column {
+      grid-template-columns: 1fr 1fr;
+    }
+    .item {
+      margin-bottom: 16px;
+    }
+    .item h3 {
+      margin: 0 0 4px;
+      font-size: 1.1rem;
+    }
+    .item span {
+      display: block;
+      color: #777;
+      font-size: 0.95rem;
+    }
+    .skills {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills li {
+      background: #e0f7fa;
+      color: #006064;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 640px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="center">
+<div class="container">
+    <header>
 <h1>Oliver Trakossas</h1>
-<div></div>
+      <p>Programmer | Front-End Developer | Problem Solver</p>
+      <p>Email: oli3520@hotmail.com
+        <header>
+
+<section>
+<h2>Om mig</h2>
+<p>nørd</p>
+</section>
 <div class="static">
 <p> ____________________________________</p>
 </div>
-
-<div class="center, split-container">
-  <div class="left">
-    <h2>Udannelse</h2>
-    <p>TEC Data og kommunikation, 2025 </p>
-  </div>
-  <div class="right">
-    <h2>Erfaring</h2>
-    <p></p>
-  </div>
+<section class="grid two-column">
+<div class="item">
+<h2>Erfaring</h2>
+<span>Software Developer at XYZ Company (2020 - Present)</span>
+</div>
+<div class="item">
+<h3>Udannelse</h3>
+<span>TEC Data og kommunikation, 2025</span>
+</div>
+<div>
+  <h2
 </div>
 
 </body>
