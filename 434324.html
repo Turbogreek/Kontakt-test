@@ -12,7 +12,9 @@
 }
 .split-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+ width: 80%;
+ height: 400px;
+ box-shadow: 0 4px 10px 
 }
 .left, .right {
   padding: 20px;
@@ -25,6 +27,11 @@
     height: 1vh;
 }
 body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: rgb(240, 240, 240);
 }
 
@@ -40,14 +47,15 @@ p {
 </style>
 </head>
 <body>
-
+<div class="center">
 <h1>Oliver Trakossas</h1>
+<div></div>
 <div class="static">
 <p> ____________________________________</p>
 </div>
 
 <div class="center, split-container">
-  <div class="left,center">
+  <div class="left">
     <h2>Udannelse</h2>
     <p>TEC Data og kommunikation, 2025 </p>
   </div>
