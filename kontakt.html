@@ -1,124 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     </head>
 
-    <style>
-     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #10282f;
-      color: #e5f2f6;
-    }
-    .kontakt-container {
-      background-color: #0f3c4b;
-      padding: 20px;
-      margin-top: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    }
-    .kontakt-container h2 {
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #e5f2f6;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #c3e5ee;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 16px;
-      border: 1px solid #4a8ea3;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 14px;
-      background-color: #1b4f5f;
-      color: #e5f2f6;
-    }
-    input:focus, textarea:focus {
-      border-color: #65c4d7;
-      outline: none;
-    }
-    button {
-      width: 100%;
-      background-color: #1b8ea2;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #157286;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      background-color: #16424f00;
-      overflow: hidden;
-      
-    }
-    ul li {
-      float: left;
-    }
-    ul li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    ul li a:hover {
-      background-color: #1e7d90;
-    }
-    .nav a{
-      color: white;
-    }
-        .menu-box {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .menu-box a {
-      display: inline-block;
-      background-color: #1b4f5f;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      transition: background-color 0.2s ease;
-    }
-
-    .menu-box a:hover {
-      background-color: #1b8ea2;
-    }
-    </style>
+    
     <body>
     <ul class="nav menu-box" >
   <li><a href="index.html">Forside</a></li>
@@ -153,31 +42,37 @@
   const form = document.getElementById('kontaktForm');
 
   form.addEventListener('submit', function(event) {
-    // 1. Stop siden fra at genopfriske og hoppe væk
     event.preventDefault();
 
-    // 2. Hent alt dataen fra dine felter (Navn, Email, Besked)
-    const formData = new FormData(form);
+    const data = {
+      name: document.getElementById('navn').value,
+      email: document.getElementById('email').value,
+      telefon: document.getElementById('telefon').value,
+      message: document.getElementById('besked').value
+    };
 
-    // 3. Send dataen afsted til FormSubmit i baggrunden
     fetch(form.action, {
         method: 'POST',
-        body: formData,
         headers: {
+            'Content-Type': 'application/json',
             'Accept': 'application/json'
-        }
+        },
+        body: JSON.stringify(data)
     })
     .then(response => {
         if (response.ok) {
-            // 4. Hvis alt gik godt, vis popuppen!
             alert('Mailen er sendt!');
-            form.reset(); // Tømmer felterne i boksen
+            form.reset();
+            
+            // HER ER DEN NYE LINJE: Sender brugeren tilbage til forsiden
+            window.location.href = "index.html"; 
+            
         } else {
             alert('Der skete en fejl. Prøv igen.');
         }
     })
     .catch(error => {
-        alert('Der kunne ikke oprettes forbindelse. Tjek dit internet.');
+        alert('Der kunne ikke oprettes forbindelse.');
     });
   });
 </script>

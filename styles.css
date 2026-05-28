@@ -1,0 +1,299 @@
+@font-face {
+  font-family: 'font1'; /* Det navn DU vælger, som du vil kalde fonten i koden */
+  font-style:italic;
+  src: url('font1.woff2') format('woff2'); /* Navnet på din fil */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+      font-family: font1, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #1d2527;
+      color: #ffffff;
+      font-display: swap;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #12384300;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1{
+        font-family: font1, sans-serif;
+        font-weight: 800;
+        line-height: 0.9;
+        font-size: 48px;
+        padding: 20px;
+        display: inline-block;
+        margin: 0;
+        letter-spacing: -1px;
+        line-height: 1.1;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .stats h1 {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+      padding: 0 10px;
+    }
+    .lilletext {
+        font-size: 15px;
+        line-height: 1.2;
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+    }
+    .textafstand {
+        display: block;
+        margin-top: 2px;
+        padding-top: 0;
+        line-height: 1.1;
+    }
+    .container > h1 {
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin: 8px 0 0;
+      color: #5a757c;
+    }
+    section {
+      margin-bottom: 24px;
+    }
+    section h2 {
+      margin-bottom: 12px;
+      border-bottom: 2px solid #3d9fb6;
+      padding-bottom: 6px;
+      font-size: 1.4rem;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .two-column {
+      grid-template-columns: 1fr 1fr;
+    }
+    .item {
+      margin-bottom: 16px;
+      margin-top: 50px;
+    }
+    .item h3 {
+      margin: 0 0 4px;
+      font-size: 1.1rem;
+    }
+    .item span {
+      display: block;
+      color: #bddfe9;
+      font-size: 0.95rem;
+    }
+    .skills {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills li {
+      background: #194f5d;
+      color: #d8f1f6;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 640px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .kontakt-container {
+      background-color: #0f3c4b;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+    .kontakt-container h2 {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #e5f2f6;
+    }
+    lablel {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #c3e5ee;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #4a8ea3;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+      background-color: #1b4f5f;
+      color: #e5f2f6;
+    }
+    input:focus, textarea:focus {
+      border-color: #65c4d7;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      background-color: #1b8ea2;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #157286;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      background-color: #16424f00;
+      overflow: hidden;
+      
+    }
+    ul li {
+      float: left;
+    }
+    ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    ul li a:hover {
+      background-color: #1e7d90;
+    }
+    .nav a{
+      color: white;
+    }
+    .menu-box {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .menu-box a {
+      display: inline-block;
+      background-color: #1b4f5f;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      transition: background-color 0.2s ease;
+    }
+
+    .menu-box a:hover {
+      background-color: #1b8ea2;
+    }
+    img {
+      width: 75px;
+      height: 75px;
+      margin-right: 10px;
+    }
+    .nav a{
+      color: white;
+    }
+    .github-knap{
+        color: #ffffff;
+    }
+    .github-knap:hover{
+        color: #1b8ea2;
+    }
+    .frame {
+  background-color: #e7e7e7; /* Gør baggrunden helt hvid */
+  color: #333333;            /* Gør teksten indeni mørkegrå, så den kan læses på hvid */
+  
+  /* Størrelse og placering */
+  max-width: 800px;          /* Sætter en max-bredde så den ikke strækker sig over hele skærmen */
+  margin: 40px auto;         /* Centrerer firkanten på skærmen og giver luft top/bund */
+  max-height: 500px;         /* Sætter en max-højde, så den ikke bliver for høj */
+  /* Luft indeni og pæne detaljer */
+  padding-top: 1px;             /* Giver luft *indeni* boksen, så teksten ikke rører kanten */
+  padding-bottom: 150px;        /* Giver lidt mindre luft i bunden, så det ser bedre ud med billedet */
+  border-radius: 12px;       /* Giver firkanten bløde, moderne hjørner (sæt til 0, hvis den skal være helt skarp) */
+  
+  /* En blød skygge så den "løfter" sig flot fra din mørke baggrund */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+.framepic {
+  width: 100%;          /* Gør at billedet altid fylder hele boksens bredde ud */
+  height: auto;        /* Sæt den højde, du gerne vil have, f.eks. 250px */
+  max-width: 250px;     /* Sørger for at billedet ikke bliver bredere end boksen */
+  /* DE TO MAGISKE LINJER HERUNDER FORHINDRER DISTORTION: */
+  object-fit: contain;    /* Skærer billedet til, så det passer perfekt uden at mases */
+  object-position: center; /* Sørger for, at det er midten af billedet, der vises */
+display: block;       /* Fjerner evt. mellemrum under billedet */
+margin: 20px auto;     /* Centrerer billedet inde i boksen */
+  border-radius: 8px;   /* Valgfrit: Giver billedet lidt bløde hjørner inde i boksen */
+  margin-bottom: 15px;  /* Giver lidt luft ned til teksten under billedet */
+}
+.midten{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Gør at det fylder hele højden af viewporten */
+
+}
+.framesize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    padding: 8px;
+}
+.picsize{
+    width: 140px;
+    height: 140px;
+    object-position: center; /* Sørger for, at det er midten af billedet, der vises */
+    object-fit: contain; /* Skærer billedet til, så det passer perfekt uden at mases */
+    border-radius: 8px; /* Valgfrit: Giver billedet lidt bløde hjørner inde i boksen */
+}
