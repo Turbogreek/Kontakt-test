@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Oliver Trakossas</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin: 8px 0 0;
+      color: #666;
+    }
+    section {
+      margin-bottom: 24px;
+    }
+    section h2 {
+      margin-bottom: 12px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 6px;
+      font-size: 1.4rem;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .two-column {
+      grid-template-columns: 1fr 1fr;
+    }
+    .item {
+      margin-bottom: 16px;
+    }
+    .item h3 {
+      margin: 0 0 4px;
+      font-size: 1.1rem;
+    }
+    .item span {
+      display: block;
+      color: #777;
+      font-size: 0.95rem;
+    }
+    .skills {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills li {
+      background: #e0f7fa;
+      color: #006064;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 640px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .kontakt-container {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .kontakt-container h2 {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    lablel {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    input:focus, textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <header>
+<h1>Oliver Trakossas</h1>
+      <p>Programmer | Front-End Developer | Problem Solver</p>
+      <p>Email: oli3520@hotmail.com
+        <header>
+
+<section>
+<h2>Om mig</h2>
+<p>nørd</p>
+</section>
+<div class="static">
+
+</div>
+<section class="grid two-column">
+  <div>
+   <h2>Erfaring</h2>
+  <div class="item">
+    <h3>Webhelp - Apple IT-Supporter</h3>
+    <p>Udførte basic it supportopgaver </p>
+</div>
+<div class="item">
+    <h3>Wolt Market</h3>
+    <span>2022 - 2025</span>
+    <p>Shiftlead stilling, med ansvar for medarbejder, og daglige opgaver</p>
+</div>
+</div>
+
+<div>
+  <h2>Uddannelse </h2>
+  <div class="item">
+    <h3>TEC Data og kommunikation</h3>
+    <span>2025 - 2030</span>
+    <p>Uddannelse indenfor programmering, og softwareudvikling</p>
+</div>
+</div>
+</section>
+
+<seaction>
+  <h2>Færdigheder</h2>
+  <ul class="skills">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>C++</li>
+    <li>Packet tracer</li>
+    <li>Git</li>
+    <li>AD/AS</li>
+  </ul>
+</seaction>
+
+
+  
+  <div class="kontakt-container">
+  <h2>Kontakt Mig</h2>
+  <form id="testform">
+    
+    <label for="navn">Navn:</label>
+    <input type="text" id="navn" name="navn" placeholder="Dit navn.." required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Din email.." required>
+
+    <label for="telefon">Telefon:</label>
+    <input type="text" id="telefon" name="telefon" placeholder="Dit telefonnummer..">
+
+    <label for="besked">Besked:</label>
+    <textarea id="besked" name="besked" placeholder="Skriv din besked her.." style="height:150px" required></textarea>
+
+    <button type="submit">Send besked</button>
+    
+  </form>
+</div>
+</section>
+
+
+<script>
+  // 1. Find formularen på siden
+  const formular = document.getElementById('testform');
+
+  // 2. Hold øje med, hvornår der bliver trykket på "Send"
+  formular.addEventListener('submit', function(event) {
+    
+    // 3. Stop siden fra at genopfriske (standard opførsel for en form)
+    event.preventDefault();
+
+    // 4. Vis popuppen!
+    alert('Mail sendt! (Dette er en test-popup)');
+
+    // 5. Nulstil felterne i boksen bagefter, så den er tom igen
+    formular.reset();
+  });
+</script>
+</body>
+</html>
