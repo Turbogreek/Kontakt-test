@@ -186,8 +186,12 @@
   
   <div class="kontakt-container">
   <h2>Kontakt Mig</h2>
-  <form id="testform">
+  <form action="oli3520@hotmail.com" method="POST">
     
+    <input type="text" name="_honey" style="display:none">
+
+    <input type="hidden" name="_next" value="https://turbogreek.github.io/Kontakt-test/">
+
     <label for="navn">Navn:</label>
     <input type="text" id="navn" name="navn" placeholder="Dit navn.." required>
 
@@ -206,23 +210,5 @@
 </div>
 </section>
 
-
-<script>
-  // 1. Find formularen på siden
-  const formular = document.getElementById('testform');
-
-  // 2. Hold øje med, hvornår der bliver trykket på "Send"
-  formular.addEventListener('submit', function(event) {
-    
-    // 3. Stop siden fra at genopfriske (standard opførsel for en form)
-    event.preventDefault();
-
-    // 4. Vis popuppen!
-    alert('Mail sendt! (Dette er en test-popup)');
-
-    // 5. Nulstil felterne i boksen bagefter, så den er tom igen
-    formular.reset();
-  });
-</script>
 </body>
 </html>
