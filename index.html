@@ -10,15 +10,15 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #10282f;
+      color: #e5f2f6;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #123843;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     }
     header {
       text-align: center;
@@ -30,14 +30,14 @@
     }
     header p {
       margin: 8px 0 0;
-      color: #666;
+      color: #a3d7e5;
     }
     section {
       margin-bottom: 24px;
     }
     section h2 {
       margin-bottom: 12px;
-      border-bottom: 2px solid #e0e0e0;
+      border-bottom: 2px solid #3d9fb6;
       padding-bottom: 6px;
       font-size: 1.4rem;
     }
@@ -57,7 +57,7 @@
     }
     .item span {
       display: block;
-      color: #777;
+      color: #bddfe9;
       font-size: 0.95rem;
     }
     .skills {
@@ -69,8 +69,8 @@
       gap: 10px;
     }
     .skills li {
-      background: #e0f7fa;
-      color: #006064;
+      background: #194f5d;
+      color: #d8f1f6;
       padding: 8px 12px;
       border-radius: 20px;
       font-size: 0.95rem;
@@ -82,22 +82,22 @@
     }
 
     .kontakt-container {
-      background-color: #f9f9f9;
+      background-color: #0f3c4b;
       padding: 20px;
       margin-top: 30px;
       border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     }
     .kontakt-container h2 {
       margin-bottom: 8px;
       font-weight: bold;
-      color: #333;
+      color: #e5f2f6;
     }
     lablel {
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
-      color: #555;
+      color: #c3e5ee;
     }
     input[type="text"],
     input[type="email"],
@@ -105,18 +105,20 @@
       width: 100%;
       padding: 12px;
       margin-bottom: 16px;
-      border: 1px solid #ccc;
+      border: 1px solid #4a8ea3;
       border-radius: 4px;
       box-sizing: border-box;
       font-size: 14px;
+      background-color: #1b4f5f;
+      color: #e5f2f6;
     }
     input:focus, textarea:focus {
-      border-color: #007BFF;
+      border-color: #65c4d7;
       outline: none;
     }
     button {
       width: 100%;
-      background-color: #007BFF;
+      background-color: #1b8ea2;
       color: white;
       padding: 12px 20px;
       border: none;
@@ -127,11 +129,75 @@
       transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #157286;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      background-color: #16424f00;
+      overflow: hidden;
+      
+    }
+    ul li {
+      float: left;
+    }
+    ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    ul li a:hover {
+      background-color: #1e7d90;
+    }
+    .nav a{
+      color: white;
+    }
+    .menu-box {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .menu-box a {
+      display: inline-block;
+      background-color: #1b4f5f;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      transition: background-color 0.2s ease;
+    }
+
+    .menu-box a:hover {
+      background-color: #1b8ea2;
+    }
+    img {
+      width: 75px;
+      height: 75px;
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
+<ul class="nav menu-box" >
+  <li><a href="index.html">Forside</a></li>
+  <li><a href="project.html">Mine projekter</a></li>
+  <li><a href="kontakt.html">Kontakt mig</a></li>
+</ul>
 <div class="container">
     <header>
 <h1>Oliver Trakossas</h1>
@@ -140,6 +206,8 @@
         <header>
 
 <section>
+
+ 
 <h2>Om mig</h2>
 <p>nørd</p>
 </section>
@@ -182,32 +250,17 @@
   </ul>
 </seaction>
 
-
-  
-  <div class="kontakt-container">
-  <h2>Kontakt Mig</h2>
-  <form action="https://formsubmit.co/oli3520@hotmail.com" method="POST">
-    
-    <input type="text" name="_honey" style="display:none">
-
-    <input type="hidden" name="_next" value="https://turbogreek.github.io/Kontakt-test/">
-
-    <label for="navn">Navn:</label>
-    <input type="text" id="navn" name="navn" placeholder="Dit navn.." required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Din email.." required>
-
-    <label for="telefon">Telefon:</label>
-    <input type="text" id="telefon" name="telefon" placeholder="Dit telefonnummer..">
-
-    <label for="besked">Besked:</label>
-    <textarea id="besked" name="besked" placeholder="Skriv din besked her.." style="height:150px" required></textarea>
-
-    <button type="submit">Send besked</button>
-    
-  </form>
-</div>
+<seaction>
+  <h2>Socials</h2>
+  <div class="item">
+    <a href="https://github.com/Turbogreek" target="_blank">
+      <img src="git.svg" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/oliver-trakossas" target="_blank">
+      <img src="linkedin.svg" alt="LinkedIn">
+    </a>
+  </div>
+</seaction>
 
 </body>
 </html>
