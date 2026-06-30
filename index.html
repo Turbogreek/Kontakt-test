@@ -1,103 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="da">
 <head>
-  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Oliver Trakossas</title>
-
+  <meta name="description" content="Oliver Trakossas søger læreplads som IT-supporter eller programmør. Se CV, projekter og kontaktoplysninger.">
+  <title>Oliver Trakossas | IT-supporter & programmør-lærling</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<ul class="nav menu-box" >
-  <li><a href="index.html">Forside</a></li>
-  <li><a href="project.html">Mine projekter</a></li>
-  <li><a href="kontakt.html">Kontakt mig</a></li>
-</ul>
-<div class="frame">
-  <img src="mig.jpg" alt="Profile Picture" class="framepic">
-  <header>
-    <h1>Oliver Trakossas</h1>
-      <p>Programmer | Front-End Developer | Problem Solver</p>   
-  </header>
-  <seaction>
-  
-  <div class="item midten">
-    <a href="https://github.com/Turbogreek" target="_blank">
-      <img src="git.svg" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/oliver-trakossas" target="_blank">
-      <img src="linkedin.svg" alt="LinkedIn">
-    </a>
-  </div>
-</seaction>
-</div>
-<div class="container">
-    <header>
+  <nav class="site-nav" aria-label="Hovednavigation">
+    <a class="brand" href="index.html">Oliver Trakossas</a>
+    <div class="nav-links">
+      <a href="#profil">Profil</a>
+      <a href="#projekter">Projekter</a>
+      <a href="#erfaring">Erfaring</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
 
-        <header>
+  <main>
+    <section class="hero" id="profil">
+      <div class="hero-copy">
+        <p class="eyebrow">Søger læreplads i IT</p>
+        <h1>IT-lærling med support, kode og ledererfaring.</h1>
+        <p class="hero-text">
+          Jeg læser Data og Kommunikation på TEC i Ballerup og søger en læreplads som IT-supporter
+          eller programmør. Jeg trives med klare aftaler, teknisk problemløsning og opgaver hvor brugere,
+          drift og kode skal fungere i praksis.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="kontakt.html">Kontakt mig</a>
+          <a class="button secondary" href="https://github.com/Turbogreek" target="_blank" rel="noreferrer">Se GitHub</a>
+        </div>
+      </div>
 
-<section>
+      <aside class="profile-panel" aria-label="Kort profil">
+        <img src="mig.jpg" alt="Portræt af Oliver Trakossas" class="profile-photo">
+        <div>
+          <h2>Oliver Stavros Trakossas</h2>
+          <p>Valby, Danmark</p>
+        </div>
+        <div class="contact-strip">
+          <a href="mailto:oli3520@hotmail.com">oli3520@hotmail.com</a>
+          <a href="tel:+4540810245">+45 40 81 02 45</a>
+          <a href="https://www.linkedin.com/in/oliver-trakossas" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </aside>
+    </section>
 
-<h1>Programmør<br> Studernde</h1>
+    <section class="stats-band" aria-label="Nøgletal">
+      <div>
+        <strong>2025-2030</strong>
+        <span>Data og Kommunikation, TEC</span>
+      </div>
+      <div>
+        <strong>3-7</strong>
+        <span>Medarbejdere ledt i drift</span>
+      </div>
+      <div>
+        <strong>8</strong>
+        <span>GitHub-repos med egne projekter</span>
+      </div>
+    </section>
 
-<p>Passioneret, kreativ og nysgerrig omkring udvikling, bruger oplevelse og teknologi</p>
-</section>
+    <section class="split-section">
+      <div>
+        <p class="eyebrow">Hvad jeg kommer med</p>
+        <h2>En praktisk profil til support, drift og udvikling.</h2>
+      </div>
+      <div class="text-stack">
+        <p>
+          Jeg har erfaring med kundekontakt fra Apple IT-support, daglig struktur fra shift lead-arbejde
+          og teknisk nysgerrighed fra min uddannelse og mine egne projekter. Jeg stiller hellere et klart
+          spørgsmål end at gå i ring, og jeg arbejder bedst når opgaven bliver gjort overskuelig.
+        </p>
+       
+      </div>
+    </section>
 
+    <section class="section-block" id="projekter">
+      <div class="section-heading">
+        <p class="eyebrow">Udvalgte projekter</p>
+        <h2>Kode jeg har haft fingrene i.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-topline">
+            <span>Desktop / Launcher</span>
+            <a href="https://github.com/Turbogreek/TurboLauncher1.0" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <h3>TurboLauncher</h3>
+          <p>En launcher til private World of Warcraft-servere, hvor jeg arbejder med brugerflow, filer og praktisk desktop-logik.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-topline">
+            <span>WoW Addon</span>
+            <a href="https://github.com/Turbogreek/Spell-book-scroll-wow-TBC" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <h3>Spell Book Scroll</h3>
+          <p>Et addon der gør spellbook-navigation hurtigere med scrollwheel. Lille projekt, men med fokus på et konkret brugerproblem.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-topline">
+            <span>Web / Portfolio</span>
+            <a href="https://github.com/Turbogreek/Kontakt-test" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <h3>Denne hjemmeside</h3>
+          <p>En enkel ansøgningsside bygget i HTML/CSS med kontaktformular, projektlinks og personlig profil.</p>
+        </article>
+      </div>
+    </section>
 
-<div class="stats" width="" >
-  <h1>0<br><span class="lilletext">års erfaring</span></h1>
-  <h1>6<br><span class="lilletext">igangværende<br><span class="textafstand">projekter</span></span></h1>
-  <h1>0<br><span class="lilletext">færdigheder</span></h1>
-</div>
+    <section class="section-block" id="erfaring">
+      <div class="section-heading">
+        <p class="eyebrow">CV-overblik</p>
+        <h2>Erfaring der passer til en læreplads.</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>2025-2030</span>
+          <h3>Technical Education Copenhagen, TEC</h3>
+          <p>Data og Kommunikation. Arbejdet med C#, Cisco Packet Tracer, starten af CCNA, fysisk netværksudstyr og Windows Server/AD i VM'er.</p>
+        </article>
+        <article>
+          <span>2022-2025</span>
+          <h3>Wolt Market, Amager</h3>
+          <p>Shift lead med ansvar for daglig drift, oplæring, koordinering og varebestilling. Erfaring med struktur og ansvar i tempo.</p>
+        </article>
+        <article>
+          <span>2021-2022</span>
+          <h3>Webhelp - Apple IT-support</h3>
+          <p>Daglig kundekontakt, fejlfinding og support til Apple-enheder med fokus på at forstå brugerens problem og finde en brugbar løsning.</p>
+        </article>
+        <article>
+          <span>2014-2018</span>
+          <h3>Greenlight Events, Nordsjællands Lanparty</h3>
+          <p>Projektlederopgaver, eventplanlægning, koordinering af IT-udstyr samt grafisk materiale til hjemmeside, sociale medier, banner og logo.</p>
+        </article>
+      </div>
+    </section>
 
-<section class="grid two-column">
-  <div class="item  framesize ">
-    <img src="Angular_Logo.svg" alt="Erfaring" class="picsize">
-  </div>
-  <div class="item framesize">
-    <img src="c++logo.svg" alt="C++" class="picsize">
-  </div>
-</section>
-<div class="static">
+    <section class="skills-section">
+      <div>
+        <p class="eyebrow">Værktøjer og styrker</p>
+        <h2>Teknisk fundament med service i ryggen.</h2>
+      </div>
+      <div class="skills-list">
+        <span>C#</span>
+        <span>HTML/CSS</span>
+        <span>Git/GitHub</span>
+        <span>IT-support</span>
+        <span>Netværk</span>
+        <span>Cisco Packet Tracer</span>
+        <span>Windows Server/AD</span>
+        <span>AI-erfaring</span>
+        <span>Teamwork</span>
+        <span>Ledelse</span>
+        <span>Dansk</span>
+        <span>Engelsk</span>
+      </div>
+    </section>
 
-</div>
-<section class="grid two-column">
-  <div>
-   <h2>Erfaring</h2>
-  <div class="item">
-    <h3>Webhelp - Apple IT-Supporter</h3>
-    <p>Udførte basic it supportopgaver </p>
-</div>
-<div class="item">
-    <h3>Wolt Market</h3>
-    <span>2022 - 2025</span>
-    <p>Shiftlead stilling, med ansvar for medarbejder, og daglige opgaver</p>
-</div>
-</div>
-
-<div>
-  <h2>Uddannelse </h2>
-  <div class="item">
-    <h3>TEC Data og kommunikation</h3>
-    <span>2025 - 2030</span>
-    <p>Uddannelse indenfor programmering, og softwareudvikling</p>
-</div>
-</div>
-</section>
-
-<seaction>
-  <h2>Færdigheder</h2>
-  <ul class="skills">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>C++</li>
-    <li>Packet tracer</li>
-    <li>Git</li>
-    <li>AD/AS</li>
-  </ul>
-</seaction>
-
-
-
+    <section class="cta-section">
+      <p class="eyebrow">Klar til samtale</p>
+      <h2>Jeg leder efter et sted, hvor jeg kan lære fra dygtige folk og bidrage til rigtige opgaver.</h2>
+      <div class="hero-actions">
+        <a class="button primary" href="kontakt.html">Send en besked</a>
+        <a class="button secondary" href="project.html">Se flere projekter</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

@@ -1,80 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt Oliver Trakossas om læreplads som IT-supporter eller programmør.">
+  <title>Kontakt | Oliver Trakossas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Hovednavigation">
+    <a class="brand" href="index.html">Oliver Trakossas</a>
+    <div class="nav-links">
+      <a href="index.html#profil">Profil</a>
+      <a href="project.html">Projekter</a>
+      <a href="index.html#erfaring">Erfaring</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
 
-    
-    <body>
-    <ul class="nav menu-box" >
-  <li><a href="index.html">Forside</a></li>
-  <li><a href="project.html">Projekter</a></li>
-  <li><a href="kontakt.html">Kontakt mig</a></li>
-</ul>
-<div class="kontakt-container">
-  <h2>Kontakt Mig</h2>
-  <form id="kontaktForm" action="https://formsubmit.co/ajax/oli3520@hotmail.com" method="POST">
-    
-    <input type="text" name="_honey" style="display:none">
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Skal vi tage en samtale om læreplads, support eller udvikling?</h1>
+      <p>
+        Jeg svarer gerne på spørgsmål om min uddannelse, mine projekter og hvad jeg kan bidrage med
+        i en IT-supporter- eller programmør-lærlingeplads.
+      </p>
+    </section>
 
-    <input type="hidden" name="_next" value="https://turbogreek.github.io/Kontakt-test/">
+    <section class="contact-layout">
+      <aside class="contact-card">
+        <p class="eyebrow">Direkte oplysninger</p>
+        <h2>Oliver Stavros Trakossas</h2>
+        <p class="contact-intro">Valby, Danmark</p>
+        <a href="mailto:oli3520@hotmail.com">oli3520@hotmail.com</a>
+        <a href="tel:+4540810245">+45 40 81 02 45</a>
+        <a href="https://github.com/Turbogreek" target="_blank" rel="noreferrer">GitHub: @Turbogreek</a>
+        <a href="https://www.linkedin.com/in/oliver-trakossas" target="_blank" rel="noreferrer">LinkedIn</a>
+      </aside>
 
-    <label for="navn">Navn:</label>
-    <input type="text" id="navn" name="navn" placeholder="Dit navn.." required>
+      <section class="contact-panel">
+        <form id="kontaktForm" action="https://formsubmit.co/ajax/oli3520@hotmail.com" method="POST">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+          <input type="hidden" name="_subject" value="Ny besked fra olivertrakossas portfolio">
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Din email.." required>
+          <div>
+            <label for="navn">Navn</label>
+            <input type="text" id="navn" name="navn" placeholder="Dit navn" required>
+          </div>
 
-    <label for="telefon">Telefon:</label>
-    <input type="text" id="telefon" name="telefon" placeholder="Dit telefonnummer..">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="din@email.dk" required>
+          </div>
 
-    <label for="besked">Besked:</label>
-    <textarea id="besked" name="besked" placeholder="Skriv din besked her.." style="height:150px" required></textarea>
+          <div>
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon" placeholder="Valgfrit">
+          </div>
 
-    <button type="submit">Send besked</button>
-    
-  </form>
- </div>
- <script>
-  const form = document.getElementById('kontaktForm');
+          <div>
+            <label for="besked">Besked</label>
+            <textarea id="besked" name="besked" placeholder="Skriv gerne hvilken stilling eller læreplads det handler om." required></textarea>
+          </div>
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
+          <button type="submit">Send besked</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+  </main>
 
-    const data = {
-      name: document.getElementById('navn').value,
-      email: document.getElementById('email').value,
-      telefon: document.getElementById('telefon').value,
-      message: document.getElementById('besked').value
-    };
+  <script>
+    const form = document.getElementById("kontaktForm");
+    const statusText = document.getElementById("formStatus");
 
-    fetch(form.action, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Mailen er sendt!');
-            form.reset();
-            
-            // HER ER DEN NYE LINJE: Sender brugeren tilbage til forsiden
-            window.location.href = "index.html"; 
-            
-        } else {
-            alert('Der skete en fejl. Prøv igen.');
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusText.textContent = "Sender besked...";
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error("Formularen kunne ikke sendes.");
         }
-    })
-    .catch(error => {
-        alert('Der kunne ikke oprettes forbindelse.');
+
+        statusText.textContent = "Tak, beskeden er sendt.";
+        form.reset();
+      } catch (error) {
+        statusText.textContent = "Beskeden kunne ikke sendes lige nu. Brug gerne email eller telefon i stedet.";
+      }
     });
-  });
-</script>
- </body>
+  </script>
+</body>
 </html>
